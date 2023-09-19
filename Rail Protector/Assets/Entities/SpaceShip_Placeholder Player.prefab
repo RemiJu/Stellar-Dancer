@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d128302258ce2c4fb06e5a7bdb62f76, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.1321106
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9d128302258ce2c4fb06e5a7bdb62f76, type: 3}
       propertyPath: m_LocalPosition.y
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenWidth: 7.25
-  velocity: 1.5
+  velocity: 6
   ship: {fileID: 7293770325270174680}
   bullet: {fileID: 3674885422865650410, guid: 96aadc5fd61efbf45a177dd1fa07c49d, type: 3}
   bulletSpawn: {fileID: 4766816951766830404}

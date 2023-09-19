@@ -5,7 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager instance;
+    private static GameManager _instance;
+    public static GameManager instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new GameObject("GameManager").AddComponent<GameManager>();
+                //instance = this;
+
+            }
+            return _instance;
+        }
+        
+    }
+    public GameObject playerShip;
+    public GameObject spawnPoint;
+
     public Animator transAnim;
 
     public int score = 0;
@@ -19,17 +36,10 @@ public class GameManager : MonoBehaviour
     public bool timing = true;
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
-       if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-       else
-        {
-            Destroy(gameObject);
-        }
+        DontDestroyOnLoad(this);
+        
     }
 
     public void NextLevel()
@@ -47,6 +57,15 @@ public class GameManager : MonoBehaviour
             totalTime = timer;
         }
         
+    }
+
+    public void Respawn()
+    {
+        if(spawnPoint == null)
+        {
+            spawnPoint = GameObject.FindWithTag("Spawn");
+        }
+        Instantiate(playerShip, spawnPoint.transform.position, spawnPoint.transform.rotation);
     }
 
     IEnumerator LoadLevel()

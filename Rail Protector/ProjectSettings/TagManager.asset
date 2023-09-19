@@ -9,6 +9,7 @@ TagManager:
   - Enemy B
   - EnemyBullet
   - HeroBullet
+  - Spawn
   layers:
   - Default
   - TransparentFX
