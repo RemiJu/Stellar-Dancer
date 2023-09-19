@@ -7,6 +7,17 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public Animator transAnim;
+
+    public int score = 0;
+    public float timer = 0.0f;
+    public int deathCount = 0;
+
+    public float totalTime;
+    public int totalScore;
+    public int totalDeath;
+
+    public bool timing = true;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -25,9 +36,16 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(LoadLevel());
     }
-    // Update is called once per frame
-    void Update()
+
+    private void Update()
     {
+        if(timing == true)
+        {
+            timer = timer + Time.deltaTime;
+        } else
+        {
+            totalTime = timer;
+        }
         
     }
 

@@ -10,6 +10,10 @@ public class SceneLoad : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void StartLevel()
+    {
+        GameManager.instance.NextLevel();
+    }
     public void ExitGame()
     {
         Application.Quit();
