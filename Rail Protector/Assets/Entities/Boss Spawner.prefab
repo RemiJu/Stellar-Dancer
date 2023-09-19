@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 5624587291010380285}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -9.4, y: 4.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,7 +74,7 @@ GameObject:
   - component: {fileID: 1896107033919026588}
   m_Layer: 0
   m_Name: Boss Spawner
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,8 +108,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653ce15801758f841b4716c1cbc4b27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawnType: 0
-  enemySpawnCount: 0
+  enemySpawnType: {fileID: 1021972556695305937, guid: ff3340bee366f5046a384438609c0d9a, type: 3}
+  spawnPoint: {fileID: 639284749888411269}
+  enemySpawnCount: 1
+  ogSpawnTime: 40
+  spawnTime: 40
+  timeSpeed: 2
 --- !u!1 &6795089537173675398
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +172,7 @@ Transform:
   m_GameObject: {fileID: 6826347670062697338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 8.4, y: 3.82, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

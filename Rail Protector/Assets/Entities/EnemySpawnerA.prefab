@@ -1,36 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &905486453110673462
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1167171386875662788}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1167171386875662788
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 905486453110673462}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 7063898163782869721}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6159946567053338965
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,8 +90,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1167171386875662788}
+  m_Children: []
   m_Father: {fileID: 7125879881312051947}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7577718379021050627
@@ -170,7 +138,7 @@ GameObject:
   - component: {fileID: 2656230623087289809}
   m_Layer: 0
   m_Name: EnemySpawnerA
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,5 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653ce15801758f841b4716c1cbc4b27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawnType: 0
-  enemySpawnCount: 0
+  enemySpawnType: {fileID: 1161501971533674844, guid: 1fbc134083e9ce8429a1f9da80003c59, type: 3}
+  spawnPoint: {fileID: 7063898163782869721}
+  enemySpawnCount: 3
+  ogSpawnTime: 5
+  spawnTime: 5
+  timeSpeed: 5

@@ -10,10 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bullet;
     public Transform bulletSpawn;
 
-    void Start()
-    {
-        
-    }
     // Update is called once per frame
     void Update()
     {

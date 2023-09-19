@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6956189039161768736}
   - component: {fileID: 1356246029413105495}
   m_Layer: 0
-  m_Name: Bullet Enemy
+  m_Name: Bullet Enemy Boss
   m_TagString: EnemyBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 7
   botTop: 6
-  enemyType: 1
+  enemyType: 2
   bullet: {fileID: 7507466535266083910}
 --- !u!54 &1356246029413105495
 Rigidbody:

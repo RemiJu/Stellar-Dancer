@@ -28,8 +28,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6509015630185851775}
+  m_Children: []
   m_Father: {fileID: 6754329140058395110}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1943600190931346020
@@ -63,37 +62,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 195893690893984093}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4696207456454143113
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6509015630185851775}
-  m_Layer: 0
-  m_Name: Target
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6509015630185851775
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4696207456454143113}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6961834825757214401}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5076114893041481186
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +74,7 @@ GameObject:
   - component: {fileID: 7504276142128255527}
   m_Layer: 0
   m_Name: EnemySpawnerB
-  m_TagString: Untagged
+  m_TagString: Spawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,8 +108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 653ce15801758f841b4716c1cbc4b27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawnType: 0
-  enemySpawnCount: 0
+  enemySpawnType: {fileID: 5718423086553999041, guid: bcac9d3682d53f349a9392c7d1d54b46, type: 3}
+  spawnPoint: {fileID: 6961834825757214401}
+  enemySpawnCount: 7
+  ogSpawnTime: 6
+  spawnTime: 6
 --- !u!1 &8064480679339239753
 GameObject:
   m_ObjectHideFlags: 0
