@@ -6,7 +6,14 @@ public class StationBehaviour : MonoBehaviour
 {
     public int stationType;
     public int stationSpeed;
+    public GameObject scoreTrack;
+    
 
+    void Awake()
+    {
+        scoreTrack = GameObject.Find("Score Tracker");
+        
+    }
     void OnTriggerEnter(Collider other)
     {
         if(stationType == 1)
@@ -22,6 +29,7 @@ public class StationBehaviour : MonoBehaviour
             if (other.gameObject.tag == "Player")
             {
                 GameManager.instance.FinalScore();
+                scoreTrack.SetActive(false);
             }
         }
 
@@ -29,9 +37,6 @@ public class StationBehaviour : MonoBehaviour
 
     void Update()
     {
-      
-        
             transform.Translate(Vector3.down * stationSpeed * Time.deltaTime);
-        
     }
 }

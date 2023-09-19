@@ -151,15 +151,13 @@ MonoBehaviour:
   enemyValue: 3000
   damageValue: 30
   enemyType: 2
-  timeSpeed: 0
-  shootSpawn: {fileID: 0}
+  timeSpeed: 3
+  shootSpawn: {fileID: 4248399052600708330}
   enemySpeed: 6
   shootTime: 2
   initialShootTime: 2
   screenLength: 7
   screenWidth: 10
-  startPos: {fileID: 0}
-  endPos: {fileID: 0}
 --- !u!65 &2704770042786392429
 BoxCollider:
   m_ObjectHideFlags: 0

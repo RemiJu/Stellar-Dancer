@@ -30,7 +30,10 @@ public class SpawnEnemy : MonoBehaviour
     // Spawn Station
     public void SpawnStation()
     {
-        if(GameObject.FindGameObjectWithTag("Spawn") == null)
+        if(GameObject.FindGameObjectWithTag("Spawn") == null 
+            && GameObject.FindGameObjectWithTag("Enemy A") == null
+            && GameObject.FindGameObjectWithTag("Enemy B") == null
+            && GameObject.FindGameObjectWithTag("Boss") == null)
         {
             if (enemySpawnCount > 0 && spawnTime <= 0)
             {
@@ -54,7 +57,7 @@ public class SpawnEnemy : MonoBehaviour
             Instantiate(enemySpawnType, spawnPoint.position, spawnPoint.rotation);
         }
         else
-            if (enemySpawnCount <= 0 && spawnTime <= 0)
+            if (enemySpawnCount <= 0 && GameObject.Find(enemySpawnType.tag) == null)
         {
             Destroy(gameObject);
         }

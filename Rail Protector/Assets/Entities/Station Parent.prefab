@@ -47,7 +47,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationType: 1
-  stationSpeed: 2
+  stationSpeed: 5
+  scoreTrack: {fileID: 0}
+  finalScore: {fileID: 0}
 --- !u!65 &5318917799515580087
 BoxCollider:
   m_ObjectHideFlags: 0

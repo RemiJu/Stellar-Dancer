@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bullet;
     public Transform bulletSpawn;
 
+    
     // Update is called once per frame
     void Update()
     {
@@ -34,5 +35,13 @@ public class PlayerMovement : MonoBehaviour
     void BulletShoot()
     {
         Instantiate(bullet, bulletSpawn.transform.position, bulletSpawn.transform.rotation);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Finish")
+        {
+            GameManager.instance.FinalScore();
+        }
     }
 }

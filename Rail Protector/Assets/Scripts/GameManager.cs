@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -24,12 +23,10 @@ public class GameManager : MonoBehaviour
     public GameObject playerShip;
     public GameObject spawnPoint;
 
-    public Text _scoreTrack, _deathTrack, _timeTrack;
-
     public Animator transAnim;
 
-    public Canvas finalResults;
-    public Canvas scoreTrack;
+    //public Canvas finalResults;
+    //public Canvas scoreTrack;
 
     public int score = 0;
     public float timer = 0.0f;
@@ -52,25 +49,29 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        playerShip = GameObject.FindWithTag("Player");
-        spawnPoint = GameObject.FindWithTag("Respawn");
-        scoreTrack.enabled = true;
-        finalResults.enabled = false;
+        timing = true;
+        DontDestroyOnLoad(this);
+        
+        
+        //scoreTrack = GameObject.Find("Score Tracker").GetComponent<Canvas>();
+        //finalResults = GameObject.Find("Final Score").GetComponent<Canvas>();
+        //scoreTrack.enabled = true;
+        //finalResults.enabled = false;
     }
 
     /*public void PauseMenu()
     {
 
     }*/
-
-    public void TrackScore()
-    {
-
-    }
-
     public void FinalScore()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
+        timing = false;
+        //scoreTrack.enabled = false;
+        //finalResults.enabled = true;
+        totalScore = score;
+        totalDeath = deathCount;
+        totalTime = timer;
     }
 
     public void NextLevel()
@@ -79,15 +80,12 @@ public class GameManager : MonoBehaviour
         //StartCoroutine(LoadLevel());
     }
 
-    private void Update()
+    void Update()
     {
-        if (timing == true)
-        {
-            timer = timer + Time.deltaTime;
-        } else
-        {
-            totalTime = timer;
-        }
+        //scoreTrack = GameObject.Find("Score Tracker").GetComponent<Canvas>();
+        //finalResults = GameObject.Find("Final Score").GetComponent<Canvas>();
+
+        timer = timer += 1 * Time.deltaTime;
 
         if (GameObject.FindWithTag("Player") == null)
         {

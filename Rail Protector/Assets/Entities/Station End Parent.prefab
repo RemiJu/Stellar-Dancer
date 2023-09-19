@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6602270855387742735}
   m_Layer: 0
   m_Name: Station End Parent
-  m_TagString: Untagged
+  m_TagString: Finish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stationType: 2
-  stationSpeed: 2
+  stationSpeed: 5
+  scoreTrack: {fileID: 0}
 --- !u!65 &6602270855387742735
 BoxCollider:
   m_ObjectHideFlags: 0
