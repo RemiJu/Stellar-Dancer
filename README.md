@@ -3,3 +3,15 @@ Initial design for a game system in Stellar/Star Dancer (from Gandy Dancer) Conc
 
 Roberto Gutierrez 
 1331161
+
+
+# Controls:
+A key to move Left
+
+D Key to move Right
+
+Space to Shoot
+
+Enter to Pause
+
+When in menus, use mouse cursor to choose and left click to select.
